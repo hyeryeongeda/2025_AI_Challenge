@@ -1,29 +1,30 @@
 1️⃣ Model 변경
-Qwen/Qwen2.5-VL-3B-Instruct → Qwen/Qwen3-VL-4B-Instruct
+**Qwen/Qwen2.5-VL-3B-Instruct → Qwen/Qwen3-VL-4B-Instruct**
 
 이해력 향상: Qwen3은 멀티모달 입력(이미지+텍스트)을 더 잘 통합해, 복잡한 질문에서도 추론 능력이 향상됨
 정확도 개선: 3B → 4B로 파라미터 수가 늘어나면서 세밀한 시각적 정보 표현 가능
 안정성 강화: 학습 시 손실 감소가 더 빠르게 수렴함
-2️⃣ Image_size 변경
-IMAGE_SIZE = 384 →IMAGE_SIZE = 448
 
+2️⃣ Image_size 변경
+**IMAGE_SIZE = 384 →IMAGE_SIZE = 448**
 세부 정보 인식 향상: 이미지 내 작은 물체, 텍스트, 질감 등 미세 패턴 인식 가능
 질문-이미지 매칭 정확도 증가: 시각적 근거를 더 잘 포착하여 답변 품질 향상
-3️⃣ 학습 데이터 수 변경
-train_df.sample(n=200) → train_df.sample(n=400)
 
+3️⃣ 학습 데이터 수 변경
+**train_df.sample(n=200) → train_df.sample(n=400)**
 모델 일반화 능력 향상: 다양한 패턴을 학습하여 새로운 질문에도 대응력 상승
 Loss 안정화: 학습 초기에 loss 변동이 줄어 안정적인 수렴
 오버피팅 완화: 데이터 수를 늘려 샘플 편향 문제 완화
-4️⃣LoRA 하이파라미터 조정
-r: 8 → 16
 
+4️⃣LoRA 하이파라미터 조정
+**r: 8 → 16**
 LoRA의 랭크를 2배로 늘림으로써 모델이 미세한 문맥이나 이미지-질문 간 관계를 더 잘 포착할 수 있음
 lora_alpha: 16 → 64
 LoRA 보정값의 스케일을 4배 키움으로써 학습 속도와 표현 강도가 증가시킴
+
 5️⃣ Fine-tuning 변경
-EPOCHS = 2
-LR = 2e-4
+**EPOCHS = 2**
+**LR = 2e-4**
 
 6️⃣ 프롬프트 수정
 학습률을 높이기 위해 기존에 제공된 한글 프롬프트에서 영어 프롬프트로 수정
