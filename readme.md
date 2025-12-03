@@ -1,6 +1,3 @@
-# ✅ README.md 
-
-
 # 🚀 AI Challenge — VQA (Visual Question Answering)
 ## E026_NULL 먹던걸로(김혜령(팀장), 박정원, 정승현, 진채영)
 
